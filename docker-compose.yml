@@ -5,7 +5,6 @@ services:
     environment:
       POSTGRES_USER: myuser
       POSTGRES_PASSWORD: mypassword
-      POSTGRES_DB: mydatabase
     ports:
       - "5432:5432"
     volumes:
@@ -19,10 +18,9 @@ services:
     volumes:
       - .:/app/
     environment:
-      DATABASE_URL: postgres://myuser:mypassword@postgres_db:5432/mydatabase
       GEM_HOME: ./.gems/
     ports:
-      - "8080:8080"
+      - "3000:3000"
 
 volumes:
   postgres_data:
