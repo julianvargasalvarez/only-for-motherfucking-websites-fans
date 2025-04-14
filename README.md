@@ -1,0 +1,4 @@
+Only for Motherfucking Websites Fans
+
+Inspired by [Understanding Progressive Enhancement](https://alistapart.com/article/understandingprogressiveenhancement/) but more over, by standing on the shoulders of some fucking giants. This is a Magesting monolith to create Mothefucking Websites, I am sure only fans will appreciate it.
+ 
