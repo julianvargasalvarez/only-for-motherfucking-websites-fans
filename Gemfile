@@ -63,3 +63,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "capistrano", "~> 3.19"
+
+gem "capistrano-rails", "~> 1.7"
