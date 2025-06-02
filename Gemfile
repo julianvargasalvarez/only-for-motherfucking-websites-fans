@@ -67,3 +67,5 @@ end
 gem "capistrano", "~> 3.19"
 
 gem "capistrano-rails", "~> 1.7"
+
+gem "net-ssh", "~> 7.3"

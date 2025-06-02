@@ -373,6 +373,7 @@ DEPENDENCIES
   jbuilder
   jsbundling-rails
   kamal
+  net-ssh (~> 7.3)
   pg (~> 1.1)
   propshaft
   puma (>= 5.0)
