@@ -8,7 +8,7 @@ User=deploy
 WorkingDirectory=/home/deploy/my_app_name/current
 Environment=RAILS_ENV=production
 
-ExecStart=/usr/bin/bundle -C /home/deploy/my_app_name/current/config/puma/production.rb
+ExecStart=/usr/bin/bundle exec puma -C /home/deploy/my_app_name/current/config/puma/production.rb
 Restart=always
 KillMode=process
 
