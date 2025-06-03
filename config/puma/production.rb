@@ -1,17 +1,18 @@
-require 'puma/daemon'
+rails_env = "production"
+environment rails_env
 
-max_threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
-min_threads_count = ENV.fetch("RAILS_MIN_THREADS") { max_threads_count }
-threads min_threads_count, max_threads_count
+app_dir = "~/my_app_name" # Update me with your root rails app path
 
-# Specifies the `port` that Puma will listen on to receive requests; default is 3000.
-port ENV.fetch("PORT") { 3000 }
+bind  "unix://#{app_dir}/puma.sock"
+pidfile "#{app_dir}/puma.pid"
+state_path "#{app_dir}/puma.state"
+directory "#{app_dir}/"
 
-# Specifies the `environment` that Puma will run in.
-#
-environment ENV.fetch("RAILS_ENV") { "development" }
+stdout_redirect "#{app_dir}/log/puma.stdout.log", "#{app_dir}/log/puma.stderr.log", true
 
-# Specifies the `pidfile` that Puma will use.
-pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
+workers 2
+threads 1,2
 
-daemonize
+activate_control_app "unix://#{app_dir}/pumactl.sock"
+
+prune_bundler
