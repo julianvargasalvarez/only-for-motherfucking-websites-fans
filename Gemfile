@@ -69,3 +69,5 @@ gem "capistrano", "~> 3.19"
 gem "capistrano-rails", "~> 1.7"
 
 gem "net-ssh", "~> 7.3"
+
+gem 'capistrano3-puma', github: "seuros/capistrano-puma"
