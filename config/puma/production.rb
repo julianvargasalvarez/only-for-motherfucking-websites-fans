@@ -15,7 +15,5 @@ threads 1,2
 
 activate_control_app "unix://#{app_dir}/pumactl.sock"
 
-port 8080
-
 prune_bundler
 
