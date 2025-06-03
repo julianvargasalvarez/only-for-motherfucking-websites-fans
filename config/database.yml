@@ -14,7 +14,7 @@
 #
 default: &default
   adapter: postgresql
-  host: postgres
+  host: castor
   encoding: unicode
   user: myuser
   password: mypassword
@@ -84,9 +84,7 @@ test:
 production:
   primary: &primary_production
     <<: *default
-    database: only_for_motherfucking_websites_fans_production
-    username: only_for_motherfucking_websites_fans
-    password: <%= ENV["ONLY_FOR_MOTHERFUCKING_WEBSITES_FANS_DATABASE_PASSWORD"] %>
+    url: <%= ENV["MY_APP_DATABASE_URL"] %>
   cache:
     <<: *primary_production
     database: only_for_motherfucking_websites_fans_production_cache
