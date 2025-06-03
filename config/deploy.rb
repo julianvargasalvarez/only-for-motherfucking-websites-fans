@@ -21,7 +21,7 @@ set :format_options, command_output: true, log_file: "log/capistrano.log", color
 # set :pty, true
 
 
-append :linked_files, "config/master.key", "config/credentials.yml.enc"
+append :linked_files, "config/master.key", "config/credentials.yml.enc", "config/database.yml"
 
 # Default value for linked_dirs is []
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", "vendor", "storage"
